@@ -48,6 +48,8 @@ It converts natural-language questions into structured query intent and can reas
 
 LLMs handle semantics. SQLite and Python provide the financial source of truth. LLMs explain the retrieved facts.
 
+See the [architecture diagram](docs/architecture.md) for the full training and runtime flow.
+
 ## Run
 
 1. Copy `.env.example` to `.personal_cfo.env` and add your NVIDIA API key.
