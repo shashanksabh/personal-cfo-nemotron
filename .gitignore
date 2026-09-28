@@ -1,0 +1,40 @@
+# Secrets
+.env
+*.env
+.personal_cfo.env
+.streamlit/secrets.toml
+
+# Personal financial data
+*.db
+*.sqlite
+*.sqlite3
+data/raw/
+data/private/
+*.csv
+!data/sample_bofa.csv
+!data/sample_capital_one.csv
+!data/sample_transactions.csv
+
+# Model weights / adapters
+models/*
+!models/README.md
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs / caches
+*.log
+.cache/
+.pytest_cache/
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
