@@ -1,6 +1,6 @@
 # Personal CFO
 
-![Personal CFO dashboard](docs/personal-cfo-dashboard.jpg)
+<img width="1512" height="826" alt="image" src="https://github.com/user-attachments/assets/b9229dad-2736-4fc1-8003-98e0d5d0e068" />
 
 A fun weekend project - personal finance assistant built on NVIDIA DGX Spark.
 
