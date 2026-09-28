@@ -52,7 +52,7 @@ The Personal CFO LoRA adapter is published on Hugging Face:
 
 ## Architecture
 
-LLMs handle semantics. SQLite and Python provide the financial source of truth. LLMs explain the retrieved facts.
+Post Trained Nemotron handles semantics. SQLite and Python provide the financial source of truth. Nemotron Lightning explain the retrieved facts.
 
 See the [architecture diagram](docs/architecture.md) for the full training and runtime flow.
 
