@@ -1,6 +1,8 @@
 # Personal CFO
 
-A fun weekend project - Personal finance assistant built on NVIDIA DGX Spark.
+![Personal CFO dashboard](docs/personal-cfo-dashboard.jpg)
+
+A fun weekend project - personal finance assistant built on NVIDIA DGX Spark.
 
 It classifies bank transactions with a locally fine-tuned Nemotron model, stores the results in SQLite, and answers natural-language finance questions using Nemotron 3.5 Lightning for query planning and Python/SQLite for exact calculations.
 
@@ -9,6 +11,7 @@ It classifies bank transactions with a locally fine-tuned Nemotron model, stores
 - NVIDIA DGX Spark
 - `nvidia/Llama-3.1-Nemotron-Nano-8B-v1`
 - Unsloth + QLoRA
+- NVIDIA AutoModel container environment
 - vLLM
 - Nemotron 3.5 Lightning
 - SQLite + Python
@@ -20,7 +23,7 @@ It classifies bank transactions with a locally fine-tuned Nemotron model, stores
 
 Base model: `nvidia/Llama-3.1-Nemotron-Nano-8B-v1`
 
-I fine-tuned the 8B model with Unsloth using QLoRA, so only lightweight LoRA adapter weights are trained rather than updating the full model. The resulting `personal-cfo-v2` model runs locally on DGX Spark through vLLM.
+I fine-tuned the 8B model with Unsloth using QLoRA, so only lightweight LoRA adapter weights are trained rather than updating the full model. The resulting `personal-cfo-v2` adapter runs locally on DGX Spark through vLLM.
 
 For each transaction, it predicts:
 
@@ -36,6 +39,10 @@ On the held-out test set, category and subcategory accuracy were 91%, while the 
 `nvidia/nemotron-3.5-lightning-30b-a3b` is accessed through the NVIDIA API.
 
 It converts natural-language questions into structured query intent and can reason over retrieved financial context. Exact totals, filters, and aggregations are still computed by Python and SQLite.
+
+### Why AutoModel is in the Dockerfile
+
+`Dockerfile.personal-cfo` uses the NVIDIA AutoModel container as the NVIDIA-ready development environment on DGX Spark. The LoRA fine-tuning itself was done with Unsloth + QLoRA, while AutoModel can also be used as the environment to develop and test the LoRA adapter workflow.
 
 ## Architecture
 
