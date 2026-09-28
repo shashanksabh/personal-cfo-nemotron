@@ -44,6 +44,12 @@ It converts natural-language questions into structured query intent and can reas
 
 `Dockerfile.personal-cfo` uses the NVIDIA AutoModel container as the NVIDIA-ready development environment on DGX Spark. The LoRA fine-tuning itself was done with Unsloth + QLoRA, while AutoModel can also be used as the environment to develop and test the LoRA adapter workflow.
 
+## Model weights
+
+The Personal CFO LoRA adapter is published on Hugging Face:
+
+[shashanksabhlok/personal-cfo-nemotron-v2](https://huggingface.co/shashanksabhlok/personal-cfo-nemotron-v2)
+
 ## Architecture
 
 LLMs handle semantics. SQLite and Python provide the financial source of truth. LLMs explain the retrieved facts.
