@@ -1,6 +1,6 @@
 # Personal CFO
 
-Personal finance assistant built on NVIDIA DGX Spark.
+A fun weekend project - Personal finance assistant built on NVIDIA DGX Spark.
 
 It classifies bank transactions with a locally fine-tuned Nemotron model, stores the results in SQLite, and answers natural-language finance questions using Nemotron 3.5 Lightning for query planning and Python/SQLite for exact calculations.
 
