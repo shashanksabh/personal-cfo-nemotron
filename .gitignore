@@ -8,12 +8,14 @@
 *.db
 *.sqlite
 *.sqlite3
+*.csv
+*.jsonl
 data/raw/
 data/private/
-*.csv
 !data/sample_bofa.csv
 !data/sample_capital_one.csv
 !data/sample_transactions.csv
+!data/sample_training_data.jsonl
 
 # Model weights / adapters
 models/*
@@ -23,11 +25,16 @@ models/*
 *.pt
 *.pth
 
-# Python
+# Python environments
 __pycache__/
 *.pyc
 .venv/
 venv/
+.trainenv/
+.hftrainenv/
+
+# Generated training caches
+unsloth_compiled_cache/
 
 # Logs / caches
 *.log
