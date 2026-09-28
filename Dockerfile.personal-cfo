@@ -1,0 +1,8 @@
+FROM nvcr.io/nvidia/nemo-automodel:26.04
+
+RUN pip install --no-cache-dir \
+    openai \
+    streamlit \
+    plotly
+
+CMD ["bash"]
